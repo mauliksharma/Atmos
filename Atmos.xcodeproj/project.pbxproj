@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4335067E8640EF6FEBCB963 /* Pods_Atmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F1E8F01B83CB1FF6AAE43E /* Pods_Atmos.framework */; };
 		E370CA6521A651F20039F59E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370CA6421A651F20039F59E /* AppDelegate.swift */; };
-		E370CA6721A651F20039F59E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370CA6621A651F20039F59E /* ViewController.swift */; };
+		E370CA6721A651F20039F59E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370CA6621A651F20039F59E /* WeatherViewController.swift */; };
 		E370CA6A21A651F20039F59E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E370CA6821A651F20039F59E /* Main.storyboard */; };
 		E370CA6D21A651F20039F59E /* Atmos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E370CA6B21A651F20039F59E /* Atmos.xcdatamodeld */; };
 		E370CA6F21A651F80039F59E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E370CA6E21A651F80039F59E /* Assets.xcassets */; };
 		E370CA7221A651F80039F59E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E370CA7021A651F80039F59E /* LaunchScreen.storyboard */; };
+		E3DB1D9A21A7CA0900C9C0EB /* ChangeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB1D9921A7CA0900C9C0EB /* ChangeLocationViewController.swift */; };
+		E3DB1D9E21A7CA9300C9C0EB /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB1D9D21A7CA9300C9C0EB /* WeatherDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03F1E8F01B83CB1FF6AAE43E /* Pods_Atmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		248579274B6A1D50E7E84A00 /* Pods-Atmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atmos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Atmos/Pods-Atmos.debug.xcconfig"; sourceTree = "<group>"; };
 		E370CA6121A651F20039F59E /* Atmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E370CA6421A651F20039F59E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E370CA6621A651F20039F59E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E370CA6621A651F20039F59E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		E370CA6921A651F20039F59E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E370CA6C21A651F20039F59E /* Atmos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Atmos.xcdatamodel; sourceTree = "<group>"; };
 		E370CA6E21A651F80039F59E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E370CA7121A651F80039F59E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E370CA7321A651F80039F59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3DB1D9921A7CA0900C9C0EB /* ChangeLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewController.swift; sourceTree = "<group>"; };
+		E3DB1D9D21A7CA9300C9C0EB /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		F2604F9D46533A48A4865CCB /* Pods-Atmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Atmos/Pods-Atmos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4335067E8640EF6FEBCB963 /* Pods_Atmos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AB67CB1F2BEE3A8338782B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03F1E8F01B83CB1FF6AAE43E /* Pods_Atmos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0E3A6FF86232F675EECA169 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				248579274B6A1D50E7E84A00 /* Pods-Atmos.debug.xcconfig */,
+				F2604F9D46533A48A4865CCB /* Pods-Atmos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E370CA5821A651F20039F59E = {
 			isa = PBXGroup;
 			children = (
 				E370CA6321A651F20039F59E /* Atmos */,
 				E370CA6221A651F20039F59E /* Products */,
+				C0E3A6FF86232F675EECA169 /* Pods */,
+				5AB67CB1F2BEE3A8338782B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +84,41 @@
 		E370CA6321A651F20039F59E /* Atmos */ = {
 			isa = PBXGroup;
 			children = (
-				E370CA6421A651F20039F59E /* AppDelegate.swift */,
-				E370CA6621A651F20039F59E /* ViewController.swift */,
-				E370CA6821A651F20039F59E /* Main.storyboard */,
+				E3DB1D9F21A7CA9900C9C0EB /* Model */,
+				E3DB1D9C21A7CA6E00C9C0EB /* View */,
+				E3DB1D9B21A7CA3700C9C0EB /* Controller */,
 				E370CA6E21A651F80039F59E /* Assets.xcassets */,
 				E370CA7021A651F80039F59E /* LaunchScreen.storyboard */,
 				E370CA7321A651F80039F59E /* Info.plist */,
 				E370CA6B21A651F20039F59E /* Atmos.xcdatamodeld */,
 			);
 			path = Atmos;
+			sourceTree = "<group>";
+		};
+		E3DB1D9B21A7CA3700C9C0EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E370CA6421A651F20039F59E /* AppDelegate.swift */,
+				E370CA6621A651F20039F59E /* WeatherViewController.swift */,
+				E3DB1D9921A7CA0900C9C0EB /* ChangeLocationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E3DB1D9C21A7CA6E00C9C0EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E370CA6821A651F20039F59E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E3DB1D9F21A7CA9900C9C0EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3DB1D9D21A7CA9300C9C0EB /* WeatherDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E370CA7621A651F80039F59E /* Build configuration list for PBXNativeTarget "Atmos" */;
 			buildPhases = (
+				F495077943FC6B429C54A0F2 /* [CP] Check Pods Manifest.lock */,
 				E370CA5D21A651F20039F59E /* Sources */,
 				E370CA5E21A651F20039F59E /* Frameworks */,
 				E370CA5F21A651F20039F59E /* Resources */,
+				480162B83C032E57C4648BD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +189,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		480162B83C032E57C4648BD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Atmos/Pods-Atmos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Atmos/Pods-Atmos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F495077943FC6B429C54A0F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Atmos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E370CA5D21A651F20039F59E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E370CA6721A651F20039F59E /* ViewController.swift in Sources */,
+				E370CA6721A651F20039F59E /* WeatherViewController.swift in Sources */,
+				E3DB1D9E21A7CA9300C9C0EB /* WeatherDataModel.swift in Sources */,
 				E370CA6521A651F20039F59E /* AppDelegate.swift in Sources */,
 				E370CA6D21A651F20039F59E /* Atmos.xcdatamodeld in Sources */,
+				E3DB1D9A21A7CA0900C9C0EB /* ChangeLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +393,7 @@
 		};
 		E370CA7721A651F80039F59E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 248579274B6A1D50E7E84A00 /* Pods-Atmos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +412,7 @@
 		};
 		E370CA7821A651F80039F59E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2604F9D46533A48A4865CCB /* Pods-Atmos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
