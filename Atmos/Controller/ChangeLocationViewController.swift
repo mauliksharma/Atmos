@@ -11,7 +11,7 @@ import UIKit
 //MARK: - Delegate Protocol
 
 protocol ChangeLocationDelegate {
-    func didEnterNewLocationName(location: String)
+    func didEnterNewLocationName(locationName: String)
 }
 
 class ChangeLocationViewController: UIViewController, UITextFieldDelegate {
@@ -28,7 +28,7 @@ class ChangeLocationViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func getWeather(_ sender: UIButton) {
         if let location = changeLocationTextField.text {
-            delegate?.didEnterNewLocationName(location: location)
+            delegate?.didEnterNewLocationName(locationName: location)
             self.dismiss(animated: true, completion: nil)
         }
     }
