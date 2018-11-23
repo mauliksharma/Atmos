@@ -16,6 +16,7 @@
 		E370CA7221A651F80039F59E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E370CA7021A651F80039F59E /* LaunchScreen.storyboard */; };
 		E3DB1D9A21A7CA0900C9C0EB /* ChangeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB1D9921A7CA0900C9C0EB /* ChangeLocationViewController.swift */; };
 		E3DB1D9E21A7CA9300C9C0EB /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB1D9D21A7CA9300C9C0EB /* WeatherDataModel.swift */; };
+		E3DB1DA221A8045200C9C0EB /* Weather&Time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3DB1DA121A8045200C9C0EB /* Weather&Time.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E370CA7321A651F80039F59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3DB1D9921A7CA0900C9C0EB /* ChangeLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewController.swift; sourceTree = "<group>"; };
 		E3DB1D9D21A7CA9300C9C0EB /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		E3DB1DA121A8045200C9C0EB /* Weather&Time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Weather&Time.ttf"; sourceTree = "<group>"; };
 		F2604F9D46533A48A4865CCB /* Pods-Atmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Atmos/Pods-Atmos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 		E3DB1D9C21A7CA6E00C9C0EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E3DB1DA021A8043500C9C0EB /* Font */,
 				E370CA6821A651F20039F59E /* Main.storyboard */,
 			);
 			path = View;
@@ -119,6 +122,14 @@
 				E3DB1D9D21A7CA9300C9C0EB /* WeatherDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E3DB1DA021A8043500C9C0EB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E3DB1DA121A8045200C9C0EB /* Weather&Time.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E370CA7221A651F80039F59E /* LaunchScreen.storyboard in Resources */,
+				E3DB1DA221A8045200C9C0EB /* Weather&Time.ttf in Resources */,
 				E370CA6F21A651F80039F59E /* Assets.xcassets in Resources */,
 				E370CA6A21A651F20039F59E /* Main.storyboard in Resources */,
 			);

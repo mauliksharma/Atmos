@@ -22,6 +22,11 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var weatherConditionLabel: UILabel!
     
     //MARK: - Instance Variables
     
@@ -62,12 +67,21 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     
     func updateWeatherDataModel(json: JSON) {
         
-        let tempResult = json["main"]["temp"].doubleValue
         let locationName = json["name"].stringValue
+        let currTempResult = json["main"]["temp"].doubleValue
+        let minTempResult = json["main"]["temp_min"].doubleValue
+        let maxTempResult = json["main"]["temp_max"].doubleValue
+        let pressureResult = json["main"]["pressure"].doubleValue
+        let humidityResult = json["main"]["humidity"].doubleValue
+        let weatherCode = json["weather"][0]["id"].intValue
         
-        weatherDataModel.temperature = Int(tempResult - 273.15)
         weatherDataModel.locationName = locationName
-        
+        weatherDataModel.currTemp = Int(currTempResult - 273.15)
+        weatherDataModel.minTemp = Int(minTempResult - 273.15)
+        weatherDataModel.maxTemp = Int(maxTempResult - 273.15)
+        weatherDataModel.pressure = Int(pressureResult)
+        weatherDataModel.humidity = Int(humidityResult)
+        weatherDataModel.weatherKeyword = WeatherDataModel.getWeatherKeyword(condition: weatherCode)
         updateViewFromModel()
     }
     
@@ -78,7 +92,13 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     func updateViewFromModel() {
         
         locationLabel.text = weatherDataModel.locationName
-        temperatureLabel.text = "\(weatherDataModel.temperature)°"
+        temperatureLabel.text = "\(weatherDataModel.currTemp)°C"
+        minLabel.text = "Min: \(weatherDataModel.minTemp)°C"
+        maxLabel.text = "Max: \(weatherDataModel.maxTemp)°C"
+        pressureLabel.text = "Pressure: \(weatherDataModel.pressure) hpa"
+        humidityLabel.text = "Humidity: \(weatherDataModel.humidity) %"
+        weatherConditionLabel.text = weatherDataModel.weatherKeyword
+        
     }
     
     //MARK: - Location Manager Delegate Methods

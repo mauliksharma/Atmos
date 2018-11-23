@@ -27,10 +27,7 @@ class ChangeLocationViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Actions
     
     @IBAction func getWeather(_ sender: UIButton) {
-        if let location = changeLocationTextField.text {
-            delegate?.didEnterNewLocationName(locationName: location)
-            self.dismiss(animated: true, completion: nil)
-        }
+        saveNewLocation()
     }
 
     @IBAction func dismissView(_ sender: UIButton) {
@@ -41,6 +38,7 @@ class ChangeLocationViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        saveNewLocation()
         return true
     }
     
@@ -51,4 +49,12 @@ class ChangeLocationViewController: UIViewController, UITextFieldDelegate {
         changeLocationTextField.delegate = self
     }
     
+    //MARK: - Convenience Methods
+    
+    func saveNewLocation() {
+        if let location = changeLocationTextField.text {
+            delegate?.didEnterNewLocationName(locationName: location)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
 }

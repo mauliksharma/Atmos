@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Weather&amp;Time.ttf">
+            <string>Weather&amp;Time</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,26 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="CDq-nw-mcX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="twB-aG-6Ls">
-                                <rect key="frame" x="16" y="52" width="343" height="106.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnt-Tb-5gZ">
-                                        <rect key="frame" x="0.0" y="38.5" width="163.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Q-Hk-X41">
-                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="106.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="90"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-Ht-D6R">
                                 <rect key="frame" x="319" y="611" width="40" height="40"/>
                                 <constraints>
@@ -49,24 +34,78 @@
                                     <segue destination="U7b-b7-1ZK" kind="show" identifier="changeLocation" id="N2e-UB-f2J"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Mzu-Q2-nND">
+                                <rect key="frame" x="16" y="60" width="343" height="472"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi6-9u-rmp">
+                                        <rect key="frame" x="119.5" y="0.0" width="104" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-9F-fTc">
+                                        <rect key="frame" x="134" y="75.5" width="75" height="90"/>
+                                        <fontDescription key="fontDescription" name="Weather&amp;Time" family="Weather&amp;Time" pointSize="90"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Q-Hk-X41">
+                                        <rect key="frame" x="126.5" y="205.5" width="90" height="106.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="90"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vwD-bC-c8C">
+                                        <rect key="frame" x="131" y="352" width="81.5" height="120"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lec-fj-aPA">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgh-Im-IMv">
+                                                <rect key="frame" x="0.0" y="32" width="81.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBB-ww-wZJ">
+                                                <rect key="frame" x="0.0" y="64" width="81.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7R-Zg-KB1">
+                                                <rect key="frame" x="0.0" y="96" width="81.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18404671549797058" green="0.21494492888450623" blue="0.26915121078491211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CDq-nw-mcX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3jy-Mi-TkC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Rv-Ht-D6R" secondAttribute="trailing" constant="16" id="5b4-dV-QbO"/>
-                            <constraint firstItem="twB-aG-6Ls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TMu-Eg-cIq"/>
-                            <constraint firstAttribute="trailing" secondItem="twB-aG-6Ls" secondAttribute="trailing" constant="16" id="UW3-wv-Fvz"/>
-                            <constraint firstAttribute="bottom" secondItem="CDq-nw-mcX" secondAttribute="bottom" id="UWl-dy-5Yq"/>
-                            <constraint firstItem="CDq-nw-mcX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hhf-gO-TtP"/>
-                            <constraint firstAttribute="trailing" secondItem="CDq-nw-mcX" secondAttribute="trailing" id="pQR-FN-VOa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mzu-Q2-nND" secondAttribute="bottom" constant="72" id="U9S-mo-Val"/>
+                            <constraint firstItem="Mzu-Q2-nND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="brc-cR-eym"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mzu-Q2-nND" secondAttribute="trailing" constant="16" id="pY1-MU-vMQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Rv-Ht-D6R" secondAttribute="bottom" constant="16" id="piY-IY-9Ug"/>
-                            <constraint firstItem="twB-aG-6Ls" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="rXv-kS-Pxj"/>
+                            <constraint firstItem="Mzu-Q2-nND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tV2-h8-f3l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="locationLabel" destination="jnt-Tb-5gZ" id="L6P-E8-ScO"/>
+                        <outlet property="humidityLabel" destination="r7R-Zg-KB1" id="cDd-f4-UBR"/>
+                        <outlet property="locationLabel" destination="xi6-9u-rmp" id="fEB-sd-wTL"/>
+                        <outlet property="maxLabel" destination="vgh-Im-IMv" id="rTR-ZJ-VK3"/>
+                        <outlet property="minLabel" destination="Lec-fj-aPA" id="1Y2-0m-eBj"/>
+                        <outlet property="pressureLabel" destination="CBB-ww-wZJ" id="QWY-Pr-Xjz"/>
                         <outlet property="temperatureLabel" destination="v2Q-Hk-X41" id="0UP-Am-GBX"/>
+                        <outlet property="weatherConditionLabel" destination="HHt-9F-fTc" id="tmu-qb-S6t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,16 +127,16 @@
                                     <action selector="dismissView:" destination="U7b-b7-1ZK" eventType="touchUpInside" id="B9q-5H-7cp"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER LOCATION" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-2p-f5N">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER LOCATION" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-2p-f5N">
                                 <rect key="frame" x="32" y="100" width="311" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.32641267123287671" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.18404671549797058" green="0.21494492888450623" blue="0.26915121078491211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17.5"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFb-wR-ndV">
                                 <rect key="frame" x="32" y="146" width="311" height="36"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.45780714897260272" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.18404671549797058" green="0.21494492888450623" blue="0.26915121078491211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="GET WEATHER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,7 +146,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.39308831095695496" green="0.73407012224197388" blue="0.79746401309967041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.65226813706436249" green="0.76786519895486405" blue="0.96146958007425221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="G5b-2p-f5N" firstAttribute="top" secondItem="9Gg-cB-MNY" secondAttribute="bottom" constant="32" id="0Al-jg-Lyn"/>
                             <constraint firstItem="9Gg-cB-MNY" firstAttribute="top" secondItem="JUB-nw-x7q" secondAttribute="top" constant="16" id="5hJ-xE-vo9"/>
@@ -130,7 +169,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Sun" width="180" height="320.16000366210938"/>
         <image name="left" width="32" height="32"/>
         <image name="switch" width="64" height="64"/>
     </resources>
