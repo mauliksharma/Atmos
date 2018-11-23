@@ -27,6 +27,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     let weatherDataModel = WeatherDataModel()
+    
+    //MARK: - ViewDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()

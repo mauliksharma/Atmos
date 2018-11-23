@@ -84,8 +84,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gg-cB-MNY">
                                 <rect key="frame" x="16" y="36" width="32" height="32"/>
                                 <state key="normal" image="left"/>
+                                <connections>
+                                    <action selector="dismissView:" destination="U7b-b7-1ZK" eventType="touchUpInside" id="B9q-5H-7cp"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ENTER LOCATION" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-2p-f5N">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER LOCATION" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-2p-f5N">
                                 <rect key="frame" x="32" y="100" width="311" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.32641267123287671" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,6 +102,9 @@
                                 <state key="normal" title="GET WEATHER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getWeather:" destination="U7b-b7-1ZK" eventType="touchUpInside" id="KdK-mW-4gS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39308831095695496" green="0.73407012224197388" blue="0.79746401309967041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,6 +120,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JUB-nw-x7q"/>
                     </view>
+                    <connections>
+                        <outlet property="changeLocationTextField" destination="G5b-2p-f5N" id="khN-aG-z9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcO-nD-axt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

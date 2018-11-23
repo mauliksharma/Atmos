@@ -8,23 +8,47 @@
 
 import UIKit
 
-class ChangeLocationViewController: UIViewController {
+//MARK: - Delegate Protocol
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+protocol ChangeLocationDelegate {
+    func didEnterNewLocationName(location: String)
+}
 
-        // Do any additional setup after loading the view.
+class ChangeLocationViewController: UIViewController, UITextFieldDelegate {
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var changeLocationTextField: UITextField!
+    
+    //MARK: - Delegate
+    
+    var delegate: ChangeLocationDelegate?
+    
+    //MARK: - Actions
+    
+    @IBAction func getWeather(_ sender: UIButton) {
+        if let location = changeLocationTextField.text {
+            delegate?.didEnterNewLocationName(location: location)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+
+    @IBAction func dismissView(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - TextField Delegate Methods
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-    */
-
+    
+    //MARK: - ViewDidLoad
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        changeLocationTextField.delegate = self
+    }
+    
 }
