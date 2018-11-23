@@ -20,13 +20,13 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
     //MARK: - Instance Variables
     
     let locationManager = CLLocationManager()
-    let weatherDataModel = WeatherDataModel()
+    var weatherDataModel = WeatherDataModel()
     
     //MARK: - ViewDidLoad
 
@@ -38,6 +38,77 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
 
-
+    //MARK: - Networking
+    
+    func getWeatherData(url: String, parameters: [String: String]) {
+        
+        Alamofire.request(url, method: .get, parameters: parameters).responseJSON{
+            [weak self] response in
+            if response.result.isSuccess {
+                if let resultValue = response.result.value {
+                    let weatherInfo: JSON = JSON(resultValue)
+                    print(weatherInfo)
+                    self?.updateWeatherDataModel(json: weatherInfo)
+                }
+            }
+            else {
+                print(String(describing: response.result.error))
+            }
+        }
+    }
+    
+    //MARK: - Parsing
+    
+    func updateWeatherDataModel(json: JSON) {
+        
+        let tempResult = json["main"]["temp"].doubleValue
+        let locationName = json["name"].stringValue
+        
+        weatherDataModel.temperature = Int(tempResult - 273.15)
+        weatherDataModel.locationName = locationName
+        
+        updateViewFromModel()
+    }
+    
+    
+    
+    //MARK: - Update View from Model
+    
+    func updateViewFromModel() {
+        locationLabel.text = weatherDataModel.locationName
+        temperatureLabel.text = String(weatherDataModel.temperature)
+    }
+    
+    //MARK: - Location Manager Delegate Methods
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy >= 0 {
+            locationManager.stopUpdatingLocation()
+            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+            
+            let latitude = String(location.coordinate.latitude)
+            let longitude = String(location.coordinate.longitude)
+            
+            let params : [String : String] = ["lat" : latitude, "lon" : longitude, "appid" : APP_ID]
+            getWeatherData(url: WEATHER_URL, parameters: params)
+            
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+        locationLabel.text = "Location Unavailable"
+    }
+    
+    //MARK: - Change Location Delegate methods
+    
+    
+    
+    //MARK: - Prepare for Segue
+    
+    
+    
+    
 }
 

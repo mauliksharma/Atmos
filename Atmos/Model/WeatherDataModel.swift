@@ -11,6 +11,6 @@ import Foundation
 struct WeatherDataModel {
     
     var temperature : Int = 0
-    var city : String = ""
+    var locationName : String = ""
     
 }

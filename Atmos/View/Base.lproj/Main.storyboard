@@ -65,7 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cityLabel" destination="jnt-Tb-5gZ" id="L6P-E8-ScO"/>
+                        <outlet property="locationLabel" destination="jnt-Tb-5gZ" id="L6P-E8-ScO"/>
                         <outlet property="temperatureLabel" destination="v2Q-Hk-X41" id="0UP-Am-GBX"/>
                     </connections>
                 </viewController>
