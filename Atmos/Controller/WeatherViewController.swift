@@ -11,13 +11,15 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
+//MARK: - Constants
+
+struct weatherAPIConstants {
+    static let weatherURL = "http://api.openweathermap.org/data/2.5/weather"
+    static let apiID = "157e330ee04468899e6487c542beea2a"
+}
+
 class WeatherViewController: UIViewController, CLLocationManagerDelegate, ChangeLocationDelegate {
-    
-    //MARK: - Constants
-    
-    let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    let APP_ID = "157e330ee04468899e6487c542beea2a"
-    
+
     //MARK: - Outlets
     
     @IBOutlet weak var locationLabel: UILabel!
@@ -114,8 +116,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             let latitude = String(location.coordinate.latitude)
             let longitude = String(location.coordinate.longitude)
             
-            let params : [String: String] = ["lat": latitude, "lon": longitude, "appid": APP_ID]
-            getWeatherData(url: WEATHER_URL, parameters: params)
+            let params : [String: String] = ["lat": latitude, "lon": longitude, "appid": weatherAPIConstants.apiID]
+            getWeatherData(url: weatherAPIConstants.weatherURL, parameters: params)
             
         }
     }
@@ -130,8 +132,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     
     func didEnterNewLocationName(locationName: String) {
         
-        let params: [String: String] = ["q": locationName, "appid": APP_ID]
-        getWeatherData(url: WEATHER_URL, parameters: params)
+        let params: [String: String] = ["q": locationName, "appid": weatherAPIConstants.apiID]
+        getWeatherData(url: weatherAPIConstants.weatherURL, parameters: params)
     }
     
     //MARK: - Prepare for Segue

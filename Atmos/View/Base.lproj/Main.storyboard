@@ -129,7 +129,7 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER LOCATION" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-2p-f5N">
                                 <rect key="frame" x="32" y="100" width="311" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.75123073630136983" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.18404671549797058" green="0.21494492888450623" blue="0.26915121078491211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17.5"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.65226813706436249" green="0.76786519895486405" blue="0.96146958007425221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.48963452862637935" green="0.85707050185335798" blue="0.89706602677475988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="G5b-2p-f5N" firstAttribute="top" secondItem="9Gg-cB-MNY" secondAttribute="bottom" constant="32" id="0Al-jg-Lyn"/>
                             <constraint firstItem="9Gg-cB-MNY" firstAttribute="top" secondItem="JUB-nw-x7q" secondAttribute="top" constant="16" id="5hJ-xE-vo9"/>
